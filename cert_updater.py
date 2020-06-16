@@ -8,7 +8,7 @@ def main():
     # "certbot renew --deploy-hook" provides a RENEWED_LINEAGE shell variable containing the folder path for successful renewals
     lineage = os.environ.get("RENEWED_LINEAGE")
     if lineage.endswith("/www.example.com"):
-        subprocess.run(["python3",
+        subprocess.run(["python",
             "/root/asrock_ipmi_cert_updater.py",
             "config",
             "--config-file",
