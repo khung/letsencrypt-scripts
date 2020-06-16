@@ -1,0 +1,6 @@
+[DEFAULT]
+rhost = https://www.example.com
+key-file = /etc/letsencrypt/live/www.example.com/privkey.pem
+cert-file = /etc/letsencrypt/live/www.example.com/fullchain.pem
+username = myusername
+password = mypassword
