@@ -1,8 +1,12 @@
 # This script updates the certificate for the ASRock Rack IPMI web interface. ASRock does not use the standard Redfish
 # API schema so we can"t just run the redfish Python module.
 
-import os
+# Workaround for Certbot bug #10257
+# https://github.com/certbot/certbot/issues/10257
 import sys
+sys.path = [dir for dir in sys.path if not dir.startswith('/snap/certbot/')]
+
+import os
 import argparse
 import configparser
 import logging
